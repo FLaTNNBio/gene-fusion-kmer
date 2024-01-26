@@ -146,12 +146,12 @@ allows the model to learn the local characteristics of reads and perform accurat
 
 ![Alt text](./img/sentences.png)
 
-
 ## The DL-based model. 
 The sentence-based representation previously described above is in turn exploited by a DL-based model for the detection of chimeric reads,
 built as an ensemble of two sub-models: Gene classifier and Fusion classifier. The goal of Gene classifier is to classify a sentence into the gene from which it is
 generated. It is trained using all the sentences derived from non-chimeric reads extracted from the transcripts of a reference set of genes (see the following figure).
 
+![Alt text](./img/model.png)
 
 
 # Results
