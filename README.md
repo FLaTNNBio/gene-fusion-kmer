@@ -14,7 +14,7 @@ We propose a novel DL-based model that learns to recognize the
 hidden patterns that allow us to identify chimeric RNAs deriving from oncogenic
 gene fusions. This consists of a double-classifier framework which first classifies
 the sequence of the k-mers of a read, and then infers the chimeric information
-by giving as input the list of k-mer classes to a transformer -based classifier
+by giving as input the list of k-mer classes to a transformer-based classifier.
 
 # Requirements
 
@@ -138,6 +138,8 @@ python3 train_gene_classifier.py -len_read 150 \
 ```
 
 # Gene fusion model
+
+## From k-mers to sentences
 
 # Results
 
