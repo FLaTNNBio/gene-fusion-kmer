@@ -186,6 +186,7 @@ During the test phase, the model achieved the following performance: accuracy 79
 
 # Supplementary materials
 
+[embed]./supplementary/Gene_Fusion_Supplmentary.pdf[/embed]
 # Citations of works used
 This section provides citations of all the work used in the development of this project.
 * **DNABert**: [Yanrong Ji and others, DNABERT: pre-trained Bidirectional Encoder Representations 
