@@ -186,7 +186,7 @@ During the test phase, the model achieved the following performance: accuracy 79
 
 # Supplementary materials
 
-![Alt text](./supplementary/Gene_Fusion_Supplmentary.pdf)
+![Supplementary figures](./supplementary/Gene_Fusion_Supplmentary.pdf)
 
 # Citations of works used
 This section provides citations of all the work used in the development of this project.
