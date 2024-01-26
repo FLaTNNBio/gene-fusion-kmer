@@ -164,7 +164,14 @@ two genes and reads that originate from a single gene.
 ## Gene classifier
 
 ### Data analysis
+Seventeen different \textit{reference genes} have been selected to first train \textit{Gene classifier}, and then to simulate fused transcripts from which we generated the chimeric and non-chimeric reads used to train and evaluate \textit{Fusion Classifier}. The reference genes are: \texttt{RUNX1}, \texttt{ETV6}, \texttt{RIPOR1}, \texttt{CTCF}, \texttt{KMT2A}, \texttt{PAX5}, \texttt{EZR}, \texttt{PTEN}, \texttt{PMEL}, \texttt{TAL1}, \texttt{DUX4}, \texttt{CRLF2}, \texttt{MEF2D}, \texttt{BCL9}, \texttt{TCF3}, \texttt {ZNF384}, and \texttt{PBX1}. These genes have been chosen based on their relevance and also to cover a variety of biological contexts. Furthermore, some of them are involved in known genetic fusions. The experiments were conducted using several values for the parameters described in Section \ref{sec:ml}. Here we only report the ones achieving best results: \verb|len_read| $=$ $150$, \verb|len_kmer| $=$ $6$, and \verb|n_words| $=$ $20$.
 
+After the pre-processing a total of $486,250$ sentences were generated for the training. Each sentence consists of $20$ consecutive  $k$-mers, and is given as input to the model during the training. \figurename~\ref*{fig:training_set} in the Supplementary materials~\cite{suppl} shows the data distribution for the training set. 
+In the context of genomic data, where the creation of new data via data augmentation may not be possible or desirable, non-uniform distribution of data, as in our case,  can pose a challenge. To address this problem and mitigate overfitting on the most supported classes, a \textit{loss function} weighting strategy has been  adopted. This weighting assigns a higher weight in the loss function into instances of underrepresented classes, in order to  penalize the model if it tries to favor the most populated classes and to promote better generalization across all classes of the classification problem.
+
+Fig.~\ref*{fig:test_set} in the Supplementary materials~\cite{suppl} shows the distribution of the data in the test set, that follows the same trend observed in the training set.
+The match in the data distribution between the training set and the test set is an important element in evaluating the effectiveness of the model.
+If the distribution of the test data is similar to that of the training data, this suggests that the model has been exposed to a variety of examples during training and has the ability to generalize to new data from the same distribution.
 # Supplementary materials
 
 # Citations of works used
