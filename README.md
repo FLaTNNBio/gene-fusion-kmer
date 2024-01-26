@@ -171,6 +171,7 @@ After the pre-processing a total of 486,250 sentences were generated for the tra
 ### Test results
 To generate the chimeric and non-chimeric reads, n_fusion=30 chimeric transcripts were generated. Then, by using ART Illumina, the chimeric or non-chimeric reads of length 150 from these transcripts were simulated. The distribution of data produced is not uniform, with the number of chimeric reads representing only the 7% of the set. To address this challenge, also in this case we have adopted the loss function weighting approach. 
 
+![Alt text](./img/gc_confusion_matrix.png)
 
 
 # Supplementary materials
