@@ -153,6 +153,11 @@ generated. It is trained using all the sentences derived from non-chimeric reads
 
 ![Alt text](./img/model.png)
 
+To train Fusion classifier, a set of chimeric and non-chimeric reads is generated from the same reference set of genes used for training Gene classifier. Then, for
+each read all the sentences of length n_words are generated and then provided as input to Gene classifier, previously trained. Gene classifier includes an embedding
+layer, as well as several classification layers. The outputs of the embedding layer for all the generated sentences are grouped into a single embedding matrix, which
+constitutes the input for Fusion classifier. Then, Fusion classifier uses such embedding matrices to distinguish between reads that arise from the fusion of
+two genes and reads that originate from a single gene.
 
 # Results
 
