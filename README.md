@@ -147,6 +147,7 @@ of analyzing and classifying lists of k-mers. More precisely, given a read of le
 in consecutive segments of n_words k-mers. Then, the k-mers in a segment are joined together in a sentence by using a space character as a separator, thus
 producing a set of sentences. The following figure shows an example of sentences generated from an input read, using k = 4 and n_words = 3 (that is, 3 k-mers per sentence).
 
+
 # Results
 
 # Supplementary materials
