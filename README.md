@@ -182,7 +182,7 @@ To generate the chimeric and non-chimeric reads, |n_fusion|=30 chimeric transcri
 ### Test results
 During the test phase, the model achieved the following performance: accuracy 79.09, precision 92.94, recall 76.27, and F1 score 81.95. THe following figure shows the confusion matrix, which provides a visual overview of the model predictions for chimeric and non-chimeric sequences. As we can see, the model achieves satisfactory results in both classes, with a significant number of correct predictions. The main diagonal of the matrix has high values, indicating a good ability of the model to discriminate between the two classes. 
 
-![Alt text](./img/fc_confusion_matrix.png)
+![Alt text](./img/fc_confusion_matrix.jpg)
 
 # Supplementary materials
 
