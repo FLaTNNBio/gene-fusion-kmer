@@ -161,6 +161,10 @@ two genes and reads that originate from a single gene.
 
 # Results
 
+## Gene classifier
+
+### Data analysis
+
 # Supplementary materials
 
 # Citations of works used
