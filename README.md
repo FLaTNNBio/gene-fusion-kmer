@@ -169,9 +169,18 @@ Seventeen different reference genes have been selected to first train Gene class
 After the pre-processing a total of 486,250 sentences were generated for the training. Each sentence consists of 20 consecutive k-mers, and is given as input to the model during the training. In the context of genomic data, where the creation of new data via data augmentation may not be possible or desirable, non-uniform distribution of data, as in our case,  can pose a challenge. To address this problem and mitigate overfitting on the most supported classes, a loss function weighting strategy has been  adopted. This weighting assigns a higher weight in the loss function into instances of underrepresented classes, in order to  penalize the model if it tries to favor the most populated classes and to promote better generalization across all classes of the classification problem.
 
 ### Test results
-To generate the chimeric and non-chimeric reads, n_fusion=30 chimeric transcripts were generated. Then, by using ART Illumina, the chimeric or non-chimeric reads of length 150 from these transcripts were simulated. The distribution of data produced is not uniform, with the number of chimeric reads representing only the 7% of the set. To address this challenge, also in this case we have adopted the loss function weighting approach. 
+During the test phase, the model achieved the following performance: accuracy 88.76, precision 88.89, recall 88.76, and F1 score 88.73. 
+The following figure shows the confusion matrix which provides a visual representation of the results of Gene Classifier. In this matrix of size 17 X 17, the rows represent the actual gene class while the columns represent the predicted gene class. The C_{ij} value indicates the number of samples belonging to class i that were classified as class j. The confusion matrix allows you to evaluate the performance of the model in a multiclass classification, providing an overall overview of the performance for each class. In our case, it is evident that the highest values are concentrated along the main diagonal, indicating  that achieved good classification ability. 
 
 ![Alt text](./img/gc_confusion_matrix.png)
+
+## Fusion classifier
+
+### Data analysis
+To generate the chimeric and non-chimeric reads, |n_fusion|=30 chimeric transcripts were generated. Then, by using ART Illumina, the chimeric or non-chimeric reads of length 150 from these transcripts were simulated. The distribution of samples in the two classes is not uniform, with the number of chimeric reads representing only the 7% of the set. To address this challenge, also in this case we have adopted the loss function weighting approach.  
+
+### Test results
+During the test phase, the model achieved the following performance: accuracy 79.09, precision 92.94, recall 76.27, and F1 score 81.95. THe following figure shows the confusion matrix, which provides a visual overview of the model predictions for chimeric and non-chimeric sequences. As we can see, the model achieves satisfactory results in both classes, with a significant number of correct predictions. The main diagonal of the matrix has high values, indicating a good ability of the model to discriminate between the two classes. 
 
 
 # Supplementary materials
